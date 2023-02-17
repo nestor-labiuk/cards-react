@@ -9,14 +9,14 @@ function App() {
   const bringProducts = async ()=>{
     const res = await fetch('https://fakestoreapi.com/products')
     const data = await res.json()
-
+    console.log(data)
     setProducts(data)
   }
-
+  
   useEffect(() => {
     bringProducts()
   }, [])
-
+  
   return (
     <>
       <section className="cards-container">
@@ -26,9 +26,9 @@ function App() {
           
             return (<Cards
                 key={id}
-                title={title}
+                title={title.slice(0,50)}
                 price={price}
-                description={description}
+                description={description.slice(0,50)}
                 category={category}
                 image={image}
               />)

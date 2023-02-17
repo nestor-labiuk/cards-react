@@ -4,13 +4,16 @@ const Cards = ({ image, title, description, category, price }) => {
   return (
     <div className="cards">
       <div className="cards-image">
-        <img src={image} className="image" alt={title} />
+        <img src={image} alt={title} />
       </div>
       <div className="cards-text-area">
-        <h2 className="cards-title">{title}</h2>
-        <p className="cards-text-description">{description}</p>
-        <p className="cards-text-extra">{category}</p>
-        <p className="cards-text-extra">{price}</p>
+        <h2 >{title}</h2>
+        <p>{description}... <span>(Full description)</span></p>
+        <p>Categiry: {category}</p>
+        <div className="cards-buy">
+          <p>Price: ${price}</p>
+          <button type='button'>Buy</button>
+        </div>
       </div>
     </div>
   )
