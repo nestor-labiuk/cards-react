@@ -1,6 +1,8 @@
 import {useEffect ,useState } from 'react';
 import './App.css';
 import Cards from './components/Cards/Cards';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 
 function App() {
 
@@ -19,6 +21,9 @@ function App() {
   
   return (
     <>
+      <Header>
+      
+      </Header>
       <section className="cards-container">
         {
           products?.map((product) => {
@@ -35,6 +40,10 @@ function App() {
           })
          }
       </section>
+      
+      <Footer>
+        
+      </Footer>
 
     </>
   );
