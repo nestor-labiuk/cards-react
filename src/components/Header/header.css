@@ -1,4 +1,9 @@
 .header{
-  margin: 30px 50px;
-  color: #eee;
+  margin-bottom: 25px;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--background-color-button) ;
+}
+
+.header h1{
+  margin: 20px;
 }

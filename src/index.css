@@ -1,6 +1,9 @@
 :root{
-  --main-bg-color : #222;
-  --buton-color : #159;
+  --background-color-image : #fff;
+  --background-color-cards : #5e686e;
+  --background-color-button : #FEBF00;
+  --color-button : #282936; 
+  --main-bg-color : #222228;
   --text-color : #eee;
 }
 
