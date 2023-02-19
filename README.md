@@ -5,3 +5,5 @@
 >Crea tarjetas de forma dinámica usando <https://fakestoreapi.com>.
 >
 >Para los estilos del proyecto se usó CSS plano con Grid y Flex.
+
+![Página](./src/assets/react-app.png)
