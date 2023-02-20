@@ -1,11 +1,5 @@
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  color: var(--text-color);
-  padding: 2rem;
-  border-bottom: 2px solid var(--background-color-button);
+.burger-button{
+  display: block;
 }
 
 @media only screen and (min-width: 576px){
@@ -13,7 +7,9 @@
 }
 
 @media only screen and (min-width: 768px){
-  
+  .burger-button{
+    display:none;
+  }
 }
 
 @media only screen and (min-width: 992px){
