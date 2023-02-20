@@ -2,7 +2,7 @@ import ('./burgerButton.css')
 
 const BurgerButon = (props) => {
   return (
-     <button className="burger-button">{props.name}</button> 
+     <button className={`burger-button ${(props.className || '')}`}>{props.name}</button> 
   )
 }
   
