@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Cards from '../../components/Cards/Cards';
-
+import './home.css'
 
 function Home() {
 
@@ -21,6 +21,8 @@ function Home() {
 
     <section className="cards-container">
       {
+        products.length === 0 ?
+        <h2 className="cards-loading">Loading products ...</h2>:
         products.map((product) => {
           const { id, title, price, description, category, image } = product
 
