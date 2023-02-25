@@ -1,6 +1,8 @@
 import './navbar.css'
 import BurgerButon from '../Buttons/BurgerButon'
 import {useState} from 'react'
+import { NavLink } from 'react-router-dom'
+
 
 const Navbar = (props) => {
 
@@ -22,9 +24,9 @@ const Navbar = (props) => {
 
       <ul className='nav-list'>
         <li><a href="/">{props.home}</a></li>
-        <li><a href="/">{props.aboutUs}</a></li>
-        <li><a href="/">{props.products}</a></li>
-        <li><a href="/">{props.loggins}</a></li>
+        <NavLink to={`/aboutus/`}>About Us</NavLink>
+        <NavLink to={`/Products-detail/`}>Products</NavLink>
+        <NavLink to={`/login/`} >Login</NavLink>
       </ul>
     </nav>
   )
