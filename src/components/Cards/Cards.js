@@ -17,7 +17,7 @@ const Cards = ({ image, title, description, category, price,id }) => {
         <p>Categiry: {category}</p>
         <div className="cards-buy">
           <p>Price: ${price}</p>
-          <Link to={`/product/${id}`} className='button'>Buy</Link>
+          <Link to={`/product/${id}`} className='cards-button'>Show more</Link>
         </div>
       </div>
     </div>

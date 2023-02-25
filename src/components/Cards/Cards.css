@@ -50,9 +50,10 @@
   font-size: 22PX;
 }
 
-.button {
+.cards-button {
   background: var(--color-button);
-  padding: 10px 2rem;
+  padding: 5px 1rem;
+  margin-bottom: 10px;
   cursor: pointer;
   outline: 2.5px solid var(--background-color-button);
   outline-offset: 3px;
@@ -63,9 +64,10 @@
   border-radius: 100rem;
   transition: 0.2s;
   font-weight: 600;
+  text-decoration: none;
 }
 
-.button:hover {
+.cards-button:hover {
   outline-offset: 4.5px;
   background: var(--background-color-button);
   color: var(--color-button);

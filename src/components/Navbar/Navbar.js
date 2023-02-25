@@ -8,11 +8,8 @@ const Navbar = (props) => {
 
   const [openButton, setopenButton] = useState(false)
 
-
-
   return (
     <nav className='nav'>
-
      
       {openButton ?
         <div className="nav-button-close" onClick={() => setopenButton(false)}>
@@ -20,7 +17,6 @@ const Navbar = (props) => {
         <div className="nav-button-open" onClick={() => setopenButton(true)}>
           <BurgerButon name='Open' /></div>
       }
-
 
       <ul className='nav-list'>
         <li><a href="/">{props.home}</a></li>
