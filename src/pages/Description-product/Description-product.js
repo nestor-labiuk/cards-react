@@ -4,7 +4,7 @@ import './description-product.css'
 
 const DescriptionProduct = () => {
   return (
-    <div className="product">
+    <div className="description-product">
       <h2>This page is for product description</h2>
     </div>
   )
