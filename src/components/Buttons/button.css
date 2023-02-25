@@ -1,6 +1,6 @@
 .button {
   background: var(--color-button);
-  padding: 10px 2rem;
+  padding: 10px 1rem;
   cursor: pointer;
   outline: 2.5px solid var(--background-color-button);
   outline-offset: 3px;

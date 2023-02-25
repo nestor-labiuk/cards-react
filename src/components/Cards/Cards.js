@@ -1,11 +1,9 @@
-import Button from '../Buttons/Button'
 import './cards.css'
-import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
 
-const Cards = ({ image, title, description, category, price }) => {
-  const [count, setCount] = useState(0)
+const Cards = ({ image, title, description, category, price,id }) => {
 
 
   return (
@@ -19,10 +17,7 @@ const Cards = ({ image, title, description, category, price }) => {
         <p>Categiry: {category}</p>
         <div className="cards-buy">
           <p>Price: ${price}</p>
-          <Button 
-            name='Buy'
-            onClick={() => setCount(count + 1)}
-          />
+          <Link to={`/description-product/${id}`} className='cards-button'>Show more</Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,6 @@
+.login h2{
+  color: var(--text-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+}

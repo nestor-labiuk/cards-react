@@ -1,16 +1,15 @@
 import './navbar.css'
 import BurgerButon from '../Buttons/BurgerButon'
 import {useState} from 'react'
+import { NavLink } from 'react-router-dom'
+
 
 const Navbar = (props) => {
 
   const [openButton, setopenButton] = useState(false)
 
-
-
   return (
     <nav className='nav'>
-
      
       {openButton ?
         <div className="nav-button-close" onClick={() => setopenButton(false)}>
@@ -19,12 +18,11 @@ const Navbar = (props) => {
           <BurgerButon name='Open' /></div>
       }
 
-
       <ul className='nav-list'>
-        <li><a href="/">{props.home}</a></li>
-        <li><a href="/">{props.aboutUs}</a></li>
-        <li><a href="/">{props.products}</a></li>
-        <li><a href="/">{props.loggins}</a></li>
+        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={`/aboutus/`}>About Us</NavLink>
+        <NavLink to={`/products/`}>Products</NavLink>
+        <NavLink to={`/login/`} >Login</NavLink>
       </ul>
     </nav>
   )

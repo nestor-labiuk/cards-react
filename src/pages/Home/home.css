@@ -1,0 +1,9 @@
+.cards-loading{
+  display: flex;
+  height: 600px;
+  color: var(--text-color);
+  padding-top: 15px;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+}
