@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -10,23 +10,19 @@ import Products from './pages/Products/Products';
 
 function App() {
 
- 
-
-
   return (
     <>
       <Header >
       </Header>
-     
-      <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route path='/description-product/:id' element={<DescriptionProduct/>}/> 
-        <Route path='/products' element={<Products/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/aboutus' element={<AboutUs/>}/>
-
-      </Routes>
-
+      <div className="main">
+        <Routes >
+          <Route exact path='/' element={<Home />} />
+          <Route path='/description-product/:id' element={<DescriptionProduct />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+        </Routes>
+      </div>
       <Footer>
       </Footer>
 
