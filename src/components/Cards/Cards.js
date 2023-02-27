@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Cards = ({ image, title, description, category, price,id }) => {
-
+const Cards = ({id, image, title, description, category, price }) => {
 
   return (
     <div className="cards">

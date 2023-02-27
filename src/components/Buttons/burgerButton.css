@@ -1,5 +1,17 @@
-.burger-button{
+.burger-button {
   width: 100px;
   height: 40px;
+  margin: 20px;
 }
 
+@media screen and (min-width: 768px) {
+
+  .nav-button-close {
+    display: none;
+  }
+
+  .nav-button-open {
+    display: none;
+  }
+
+}

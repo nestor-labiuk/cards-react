@@ -1,29 +1,35 @@
 import './navbar.css'
-import BurgerButon from '../Buttons/BurgerButon'
-import {useState} from 'react'
 import { NavLink } from 'react-router-dom'
-
+import { useState } from 'react'
 
 const Navbar = (props) => {
-
-  const [openButton, setopenButton] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
 
   return (
     <nav className='nav'>
-     
-      {openButton ?
-        <div className="nav-button-close" onClick={() => setopenButton(false)}>
-          <BurgerButon name='Close' /></div> :
-        <div className="nav-button-open" onClick={() => setopenButton(true)}>
-          <BurgerButon name='Open' /></div>
-      }
-
       <ul className='nav-list'>
-        <NavLink to={"/"}>Home</NavLink>
-        <NavLink to={`/aboutus/`}>About Us</NavLink>
-        <NavLink to={`/products/`}>Products</NavLink>
-        <NavLink to={`/login/`} >Login</NavLink>
+        <NavLink className="nav-link" to={"/"}>Home</NavLink>
+        <NavLink className="nav-link" to={`/aboutus/`}>About Us</NavLink>
+
+        {openModal ?
+          <>
+            <button className="nav-link" onClick={() => setOpenModal(false)}>Products</button>
+            <section>
+              <ul className="modal">
+                <NavLink to={`/products/${props.category}`} className="modal-link">Ropa hombre</NavLink>
+                <NavLink to={`/products/${props.category}`} className="modal-link">Ropa mujer</NavLink>
+                <NavLink to={`/products/${props.category}`} className="modal-link">Electrónica</NavLink>
+                <NavLink to={`/products/${props.category}`} className="modal-link">Joyas</NavLink>
+              </ul>
+            </section>
+          </>
+          :
+          <button className="nav-link" onClick={() => setOpenModal(true)}>Products</button>}
+
+
+        <NavLink className="nav-link" to={`/login/`} >Login</NavLink>
       </ul>
+
     </nav>
   )
 }

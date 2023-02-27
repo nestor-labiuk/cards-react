@@ -8,6 +8,15 @@
   background-color: var(--background-color-cards);
   width: 150px;
   height: 450px;
+  display: none;
+}
+
+.nav button{
+  background-color: var(--main-bg-color);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .nav-list {
@@ -22,10 +31,34 @@
   
 }
 
-.nav-list a {
+.nav-link {
   text-decoration: none;
   color: var(--text-color);
   margin: 20px;
+  font-size: 1rem;
+}
+
+.modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 180px;
+  height: 250px;
+  font-size: 1.1rem;
+  position: absolute;
+  text-decoration: none;
+  background-color: var(--main-bg-color);
+  right: 100px;
+  top: 150px;
+  border: 1px solid var(--background-color-button);
+
+}
+
+.modal-link{
+  color: var(--text-color);
+  list-style: none;
+  text-decoration: none;
+  margin:0 20px;
 }
 
 @media screen and (min-width: 576px) {
@@ -60,11 +93,5 @@
     padding: 0 10px;
   }
 
-  .nav-button-close{
-    display: none;
-  }
-
-  .nav-button-open{
-    display: none;
-  }
+  
 }
