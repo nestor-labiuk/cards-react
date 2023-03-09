@@ -1,33 +1,70 @@
 import './navbar.css'
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import { useState} from 'react'
+// import Products from '../../pages/Products/Products'
 
 const Navbar = (props) => {
+  
   const [openModal, setOpenModal] = useState(false)
-
+  
   return (
-    <nav className='nav'>
-      <ul className='nav-list'>
-        <NavLink className="nav-link" to={"/"}>Home</NavLink>
-        <NavLink className="nav-link" to={`/aboutus/`}>About Us</NavLink>
+    <nav className='nav' >
+      <ul className='nav-list' >
 
         {openModal ?
           <>
-            <button className="nav-link" onClick={() => setOpenModal(false)}>Products</button>
+            <NavLink
+              className="modal-link"
+            >Products</NavLink>
             <section>
-              <ul className="modal">
-                <NavLink to={`/products/${props.category}`} className="modal-link">Ropa hombre</NavLink>
-                <NavLink to={`/products/${props.category}`} className="modal-link">Ropa mujer</NavLink>
-                <NavLink to={`/products/${props.category}`} className="modal-link">Electrónica</NavLink>
-                <NavLink to={`/products/${props.category}`} className="modal-link">Joyas</NavLink>
+              {/* {console.log(Products)} */}
+              <ul className="modal"
+                onClick={() => setOpenModal(false)}
+                >    
+                <NavLink
+                  to={`/products/${props.category}`}
+                  className="modal-link"
+                  >Ropa hombre</NavLink>
+                <NavLink
+                  to={`/products/${props.category}`}
+                  className="modal-link"
+                >Ropa mujer</NavLink>
+                <NavLink
+                  to={`/products/${props.category}`}
+                  className="modal-link"
+                >Electrónica</NavLink>
+                <NavLink
+                  to={`/products/${props.category}`}
+                  className="modal-link"
+                >Joyas</NavLink>
               </ul>
             </section>
           </>
           :
-          <button className="nav-link" onClick={() => setOpenModal(true)}>Products</button>}
-
-
-        <NavLink className="nav-link" to={`/login/`} >Login</NavLink>
+          <NavLink
+          className="modal-link"
+          onClick={() => setOpenModal(true)}
+          >Products</NavLink>}
+          <NavLink
+            className={({ isActive }) => isActive ? "modal-link modal-link-active" : "modal-link"}
+            to={"/"}
+            onClick={() => setOpenModal(false)}
+          >Home</NavLink>
+          <NavLink
+            className={({ isActive }) => isActive ? "modal-link modal-link-active" : "modal-link"}
+            to={`/about-us/`}
+            onClick={() => setOpenModal(false)}
+          >About Us</NavLink>
+        <NavLink
+          className={({ isActive }) => isActive ? "modal-link modal-link-active" : "modal-link"}
+          to={`/login/`}
+          onClick={() => setOpenModal(false)}
+        >Login</NavLink>
+        {/* <NavLink
+          className={({ isActive }) => isActive ? "modal-link modal-link-active" : "modal-link"}
+          to={`/register/`}
+          onClick={() => setOpenModal(false)}
+        >Register</NavLink> */}
       </ul>
 
     </nav>

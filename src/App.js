@@ -7,6 +7,7 @@ import DescriptionProduct from './pages/Description-product/Description-product'
 import Login from './pages/Login/Login';
 import AboutUs from './pages/About-us/About-us';
 import Products from './pages/Products/Products';
+import Register from './pages/Register/Register';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
           <Route path='/description-product/:id' element={<DescriptionProduct />} />
           <Route path='/products/:category' element={<Products/>} />
           <Route path='/login' element={<Login />} />
-          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/about-us' element={<AboutUs />} />
         </Routes>
       </div>
       <Footer>

@@ -7,7 +7,7 @@ const Products = () => {
   const [products, setProducts] = useState([])
 
   const bringProductsCategory = async () => {
-    const res = await fetch('https://fakestoreapi.com/products/category/jewelery')
+    const res = await fetch(`https://fakestoreapi.com/products/category/jewelery`)
     const data = await res.json() 
 
     setProducts(data)
