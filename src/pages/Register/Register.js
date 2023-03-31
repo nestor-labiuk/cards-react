@@ -1,29 +1,86 @@
-import React from 'react'
 import { useForm } from 'react-hook-form'
 import './register.css'
 
-const Register = () => {
+const FormRegister = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm()
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  // const createUser = (data) => {
+  //   fetch('http://localhost:8080/api/users', {
+  //     method: 'POST',
+  //     body: JSON.stringify(data),
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => console.log(data))
+  //     .then(err => console.log(err))
+  // }
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  // const createUser = async (body) => {
+
+  //   try {
+  //     const response = await fetch('ttp://localhost:8080/api/users', {
+  //       method: 'POST',
+  //       body: JSON.stringify(body),
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       }
+  //     })
+  //     const data = await response.json()
+  //     console.log(data)
+
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+
+  // const onSubmit = data => {
+  //   createUser(data)
+  // }
+
+  const onSubmit = data => {
+    console.log(data)
+  }
+
+  // console.log(watch('example'))
+  // console.log(errors)
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <div className="container">
-      <h1>Register</h1>      
-      <form onSubmit={handleSubmit(onSubmit)} className="form">
-        {/* register your input into the hook by invoking the "register" function */}
-        <input defaultValue="test" {...register("example")} />
-        {/* include validation with required or other standard HTML validation rules */}
-        <input {...register("exampleRequired", { required: true })} />
-        {/* errors will return when field validation fails  */}
+    <div className='register__container'>
+
+      <h1 className='register__title'>Registro</h1>
+
+      <form className='register__form' onSubmit={handleSubmit(onSubmit)}>
+
+        <input
+          placeholder='Este campo es requerido'
+          maxLength={12}
+          type='text'{...register('name', { required: true, minLength: 3, maxLength: 12 })}
+        />
+        {errors.name && <span>Longitud mínima es 3 caracteres</span>}
+
+        <input
+          maxLength={12}
+          placeholder='Email'
+          type='text' {...register('email', { required: true, })}
+        />
         {errors.exampleRequired && <span>This field is required</span>}
-        <input className="button" type="submit" />
+
+        <input
+          maxLength={12}
+          type='text'
+          placeholder='Password' {...register('password', { required: true })}
+        />
+        {errors.password && <span>This field is required</span>}
+
+        <input type='submit' value='Registrarse' />
+
+        <input type='reset' value='Reset' />
+
       </form>
     </div>
   )
 }
 
-export default Register
+export default FormRegister

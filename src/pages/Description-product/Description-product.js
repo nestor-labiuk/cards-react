@@ -7,7 +7,7 @@ const DescriptionProduct = () => {
   // console.log(params)
 
   return (
-    <div className="description">
+    <div className='description'>
       <h2>This page is for product description</h2>
     </div>
   )
