@@ -55,22 +55,25 @@ const FormRegister = () => {
 
         <input
           placeholder='Este campo es requerido'
-          maxLength={12}
-          type='text'{...register('name', { required: true, minLength: 3, maxLength: 12 })}
+          maxLength={40}
+          type='text'
+          {...register('name', { required: true, minLength: 3})}
         />
         {errors.name && <span>Longitud mínima es 3 caracteres</span>}
 
         <input
-          maxLength={12}
           placeholder='Email'
-          type='text' {...register('email', { required: true, })}
+          maxLength={256}
+          type='text'
+          {...register('email', { required: true, })}
         />
         {errors.exampleRequired && <span>This field is required</span>}
 
         <input
-          maxLength={12}
+          placeholder='Password' 
+          maxLength={25}
           type='text'
-          placeholder='Password' {...register('password', { required: true })}
+          {...register('password', { required: true })}
         />
         {errors.password && <span>This field is required</span>}
 
