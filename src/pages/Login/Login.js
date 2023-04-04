@@ -4,11 +4,9 @@ import './login.css'
 import { NavLink } from 'react-router-dom'
 
 const Login = () => {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm()
+  const { register, handleSubmit, formState: { errors } } = useForm()
   const onSubmit = data => console.log(data)
 
-  console.log(watch('name'))
-  
   return (
     <div className='container'>
 

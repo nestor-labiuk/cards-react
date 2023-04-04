@@ -4,47 +4,9 @@ import './register.css'
 const FormRegister = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
-  // const createUser = (data) => {
-  //   fetch('http://localhost:8080/api/users', {
-  //     method: 'POST',
-  //     body: JSON.stringify(data),
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => console.log(data))
-  //     .then(err => console.log(err))
-  // }
-
-  // const createUser = async (body) => {
-
-  //   try {
-  //     const response = await fetch('ttp://localhost:8080/api/users', {
-  //       method: 'POST',
-  //       body: JSON.stringify(body),
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       }
-  //     })
-  //     const data = await response.json()
-  //     console.log(data)
-
-  //   } catch (error) {
-  //     console.log(error)
-  //   }
-  // }
-
-  // const onSubmit = data => {
-  //   createUser(data)
-  // }
-
   const onSubmit = data => {
     console.log(data)
   }
-
-  // console.log(watch('example'))
-  // console.log(errors)
 
   return (
     <div className='register__container'>

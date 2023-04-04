@@ -17,7 +17,6 @@ const Navbar = (props) => {
             >Products
             </NavLink>
             <section>
-              {/* {console.log(Products)} */}
               <ul
                 className='modal'
                 onClick={() => setOpenModal(false)}
@@ -69,11 +68,6 @@ const Navbar = (props) => {
           onClick={() => setOpenModal(false)}
         >Login
         </NavLink>
-        {/* <NavLink
-          className={({ isActive }) => isActive ? "modal-link modal-link-active" : "modal-link"}
-          to={`/register/`}
-          onClick={() => setOpenModal(false)}
-        >Register</NavLink> */}
       </ul>
 
     </nav>

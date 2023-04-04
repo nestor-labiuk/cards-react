@@ -16,8 +16,6 @@ const Products = () => {
     bringProductsCategory()
   }, [])
 
-  console.log(products)
-
   return (
     <section className='cards-container'>
       {
